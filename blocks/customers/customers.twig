@@ -1,0 +1,26 @@
+<section class="customers">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <img class="customers__img-map" src="{{ fields.map }}" alt="">
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="customers__content">
+                    {{ fields.content_block }}
+                </div>
+
+                <div class="slider-container">
+                    <div class="slider-wrapper">
+                        {% for field in fields.slider %}
+                            <div class="slide">
+                                <img src="{{ field.logo }}" alt="Логотип">
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="slider-pagination"></div>
+            </div>
+        </div>
+    </div>
+</section>

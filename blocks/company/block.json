@@ -1,0 +1,13 @@
+{
+  "name": "acf/company",
+  "title": "Company",
+  "description": "Company Block",
+  "style": [ "file:./company.css" ],
+  "category": "formatting",
+  "icon": "format-aside",
+  "keywords": ["company", "block"],
+  "acf": {
+    "mode": "preview",
+    "renderCallback": "my_acf_block_render_callback"
+  }
+}

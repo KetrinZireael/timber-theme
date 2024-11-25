@@ -1,0 +1,55 @@
+.container-custom {
+	max-width: 1885px !important;
+}
+
+
+.post-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2px;
+
+	.post-article {
+		position: relative;
+
+		h2 {
+			font-size: 1rem;
+			font-weight: 400;
+		}
+
+		&__title {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			background-color: $secondary-color-t;
+			padding: 15px 30px;
+		}
+	}
+}
+
+.pagination-block {
+	padding-top: 35px;
+	padding-bottom: 120px;
+
+	ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		gap: 20px;
+
+		li {
+			a {
+				color: $primary-color;
+			}
+		}
+
+		li.current {
+			span {
+				color: $secondary-color;
+			}
+		}
+
+		li.first, li.prev, li.next, li.btn {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,30 @@
+<section class="company">
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-12">
+                <h1 class="text-center company__title">{{ fields.title }}</h1>
+            </div>
+            <div class="col-lg-7 col-md-12 company__right">
+
+                {% for field in fields.repeater_item %}
+                    <div class="company__item-card">
+                        <h4 class="company__item-title">{{ field.title_item }} </h4>
+                        <div class="company__item-subtitle">{{ field.subtitle_item }}</div>
+                        <div class="company__item-content">{{ field.content_item }}</div>
+                    </div>
+                {% endfor %}
+
+            </div>
+            <div class="col-lg-7 col-md-12 company__bottom">
+                <a href="{{ fields.link }}" class="text-link">
+                    {{ fields.text_link }}
+                    <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="company__img">
+            <img src="{{ fields.image }}" alt="">
+        </div>
+    </div>
+</section>

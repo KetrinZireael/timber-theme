@@ -1,0 +1,62 @@
+<section class="services">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center">{{ fields.title }}</h1>
+        </div>
+
+        <div class="col-12">
+            {% if fields.featured_services_with_video is not empty %}
+                <div class="services__featured-wrap">
+                    {% for post in get_posts(fields.featured_services_with_video) %}
+                        <div class="services__featured-item">
+                            {% if post.thumbnail %}
+                                <img src="{{ post.thumbnail }}"
+                                     alt="{{ post.title }}"
+                                     class="service-image">
+                                <div class="services__icon">
+                                    <svg width="50"
+                                         height="50"
+                                         viewBox="0 0 50 50"
+                                         fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.6055 20.3193V29.6807L28.0956 25L20.6055 20.3193Z" fill="#1E836B"/>
+                                        <path d="M42.6758 5.95703H7.32422C3.28447 5.95703 0 9.24287 0 13.2812V36.7188C0 40.7571 3.28447 44.043 7.32422 44.043H42.6758C46.7155 44.043 50 40.7571 50 36.7188V13.2812C50 9.24287 46.7155 5.95703 42.6758 5.95703ZM17.6758 34.9678V15.0322L33.6231 25L17.6758 34.9678Z"
+                                              fill="#1E836B"/>
+                                    </svg>
+                                </div>
+
+                            {% endif %}
+                            <a href="{{ post.link }}" class="services__link">
+                                <h5>{{ post.title }}</h5>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p>Немає обраних послуг.</p>
+            {% endif %}
+        </div>
+
+        <div class="col-12">
+            {% if fields.featured_services is not empty %}
+            <div class="services__featured-wrap services__featured-bottom">
+                {% for post in get_posts(fields.featured_services) %}
+                    <div class="services__featured-item">
+                        {% if post.thumbnail %}
+                            <img src="{{ post.thumbnail }}"
+                                 alt="{{ post.title }}"
+                                 class="service-image">
+                        {% endif %}
+                        <a href="{{ post.link }}" class="services__link">
+                            <h5>{{ post.title }}</h5>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% else %}
+            <p>Немає обраних послуг.</p>
+        {% endif %}
+    </div>
+
+</section>

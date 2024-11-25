@@ -1,0 +1,85 @@
+.customers {
+	background-color: $dark-white;
+	padding: 7.5rem 0;
+	overflow: hidden;
+
+	@media (max-width: 1024px) {
+		padding: 3rem 0;
+	}
+
+	&__img-map {
+		object-fit: cover;
+		width: 100%;
+		height: auto;
+		max-width: 100%;
+	}
+
+	&__content {
+		h1 {
+			text-transform: uppercase;
+			font-weight: 400;
+
+			strong {
+				color: $secondary-color;
+				font-weight: 400;
+			}
+		}
+
+		@media (max-width: 1024px) {
+			padding: 3rem 0;
+		}
+	}
+
+	.slider-container {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+		height: calc(150px * 4 + 40px); /* Висота для 4 рядів (150px висота + відступи) */
+		background-color: $white;
+	}
+
+	.slider-wrapper {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr); /* 3 логотипи в ряд */
+		grid-auto-rows: 150px; /* Фіксована висота рядка */
+		gap: 10px;
+		transform: translateY(0); /* Для вертикальної прокрутки */
+		transition: transform 0.3s ease-in-out;
+		will-change: transform;
+	}
+
+	.slide {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px;
+		background-color: $white;
+	}
+
+	.slide img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.slider-pagination {
+		display: flex;
+		justify-content: center;
+		margin-top: 20px; /* Відстань від слайдера */
+	}
+
+	.pagination-dot {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background-color: #ccc;
+		margin: 0 5px;
+		cursor: pointer;
+	}
+
+	.pagination-dot.active {
+		background-color: $secondary-color;
+	}
+
+}

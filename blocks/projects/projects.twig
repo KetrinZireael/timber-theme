@@ -1,0 +1,37 @@
+<section class="projects">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center">{{ fields.title }}</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            {% if fields.featured_projects is not empty %}
+                <div class="projects__wrap-card">
+                    {% for post in get_posts(fields.featured_projects) %}
+                        <div class="projects__wrap-item">
+                            {% if post.thumbnail %}
+                                <a href="{{ post.link }}" class="service-link">
+                                    <img src="{{ post.thumbnail.src('medium') }}" alt="{{ post.title }}" class="service-image">
+                                </a>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p>Немає обраних послуг.</p>
+            {% endif %}
+        </div>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-12 projects__col">
+                    <a href="{{ fields.link }}" class="projects__link">
+                        {{ fields.title_link }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

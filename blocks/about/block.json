@@ -1,0 +1,13 @@
+{
+  "name": "acf/about",
+  "title": "About Us",
+  "description": "About Block",
+  "style": [ "file:./about.css" ],
+  "category": "formatting",
+  "icon": "format-aside",
+  "keywords": ["about", "block"],
+  "acf": {
+    "mode": "preview",
+    "renderCallback": "my_acf_block_render_callback"
+  }
+}

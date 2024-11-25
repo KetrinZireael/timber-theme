@@ -1,0 +1,13 @@
+{
+  "name": "acf/hero",
+  "title": "Hero",
+  "description": "Hero Block",
+  "style": [ "file:./hero.css" ],
+  "category": "formatting",
+  "icon": "format-aside",
+  "keywords": ["hero", "block"],
+  "acf": {
+    "mode": "preview",
+    "renderCallback": "my_acf_block_render_callback"
+  }
+}

@@ -1,0 +1,23 @@
+<section class="about-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-4">
+                <div class="about-us__img-wrap">
+                    <img src="{{ fields.first_image }}" alt="{{ fields.title }}">
+                    <img src="{{ fields.second_image }}" alt="{{ fields.title }}">
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-8 pt-4 about-us__col-right">
+                <h1>{{ fields.title }}</h1>
+                <div class="about-us__content">
+                    {{ fields.content_block }}
+                </div>
+                <a href="{{ fields.link }}" class="text-link">
+                    {{ fields.title_link }}
+                    <i class="fa fa-chevron-right"></i>
+                </a>
+                <img class="about-us__last-img" src="{{ fields.third_image }}" alt="{{ fields.title }}">
+            </div>
+        </div>
+    </div>
+</section>

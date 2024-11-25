@@ -1,0 +1,13 @@
+{
+  "name": "acf/customers",
+  "title": "Customers",
+  "description": "Customers Block",
+  "style": [ "file:./customers.scss" ],
+  "category": "formatting",
+  "icon": "format-aside",
+  "keywords": ["company", "block"],
+  "acf": {
+    "mode": "preview",
+    "renderCallback": "my_acf_block_render_callback"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "acf/services",
+  "title": "Services",
+  "description": "Services Block",
+  "style": [ "file:./services.css" ],
+  "category": "formatting",
+  "icon": "format-aside",
+  "keywords": ["services", "block"],
+  "acf": {
+    "mode": "preview",
+    "renderCallback": "my_acf_block_render_callback"
+  }
+}

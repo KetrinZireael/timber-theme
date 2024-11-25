@@ -1,0 +1,15 @@
+{% extends "tease.twig" %}
+
+{% block content %}
+		<p>{{ post.excerpt({ words:5, read_more: "Keep reading" }) }}</p>
+		{% if post.thumbnail.src %}
+			<div class="post-article">
+				<img src="{{ post.thumbnail.src }}" />
+				<div class="post-article__title">
+					<h2 class="h2">
+						<a href="{{post.link}}">{{ post.title }}</a>
+					</h2>
+				</div>
+			</div>
+		{% endif %}
+{% endblock %}

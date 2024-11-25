@@ -1,0 +1,13 @@
+{
+  "name": "acf/filter-project",
+  "title": "Filter Project",
+  "description": "Filter Project Block",
+  "style": [ "file:./filter-project.scss" ],
+  "category": "formatting",
+  "icon": "format-aside",
+  "keywords": ["filter-project", "block"],
+  "acf": {
+    "mode": "preview",
+    "renderCallback": "my_acf_block_render_callback"
+  }
+}

@@ -1,0 +1,39 @@
+/*!******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./blocks/about/about.scss ***!
+  \******************************************************************************************************************/
+.about-us {
+  padding: 7.5rem 0;
+}
+@media (max-width: 991px) {
+  .about-us {
+    padding: 4.5rem 0;
+  }
+}
+.about-us h1 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.about-us img {
+  width: 100%;
+}
+.about-us__img-wrap {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+@media (max-width: 767px) {
+  .about-us__img-wrap img:last-child {
+    height: 365px;
+    object-fit: cover;
+  }
+}
+.about-us__col-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 1020px) {
+  .about-us__col-right .text-link {
+    padding-bottom: 20px;
+  }
+}
